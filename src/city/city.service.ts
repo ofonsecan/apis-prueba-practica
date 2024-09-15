@@ -51,10 +51,7 @@ export class CityService {
 
     private validateCountry(country: string): void {
         if (!this.allowedCountries.includes(country)) {
-          throw new BusinessLogicException(
-            `The country ${country} is not allowed. Allowed countries are: ${this.allowedCountries.join(', ')}`,
-            BusinessError.BAD_REQUEST
-          );
+          throw new BusinessLogicException("The country is not allowed", BusinessError.BAD_REQUEST);
         }
     }
 }
