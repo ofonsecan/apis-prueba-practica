@@ -6,6 +6,7 @@ import { SupermarketModule } from './supermarket/supermarket.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CityEntity } from './city/city.entity';
 import { SupermarketEntity } from './supermarket/supermarket.entity';
+import { CitySupermarketModule } from './city-supermarket/city-supermarket.module';
 
 @Module({
   imports: [CityModule, SupermarketModule,
@@ -21,6 +22,7 @@ import { SupermarketEntity } from './supermarket/supermarket.entity';
       synchronize: true,
       keepConnectionAlive: true
     }),
+    CitySupermarketModule,
   ],
   controllers: [AppController],
   providers: [AppService],

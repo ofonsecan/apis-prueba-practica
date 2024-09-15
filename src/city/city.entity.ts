@@ -1,4 +1,4 @@
-import { SupermarketEntity } from "src/supermarket/supermarket.entity";
+import { SupermarketEntity } from "../supermarket/supermarket.entity";
 import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()

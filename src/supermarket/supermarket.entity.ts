@@ -1,4 +1,4 @@
-import { CityEntity } from "src/city/city.entity";
+import { CityEntity } from "../city/city.entity";
 import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
@@ -16,7 +16,7 @@ export class SupermarketEntity {
     latitude: number;
 
     @Column()
-    web: string;
+    website: string;
 
     @ManyToMany(() => CityEntity, city => city.supermarkets)
     cities: CityEntity[];
